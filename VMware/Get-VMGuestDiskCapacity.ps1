@@ -16,7 +16,7 @@ Function Export-VMGuestDiskCapacity {
     .EXAMPLE
             "vc001.katalykt.lan", "vc002.katalykt.lan" | Get-VMGuestDiskCapacity | Export-VMGuestDiskCapacity
     .PROFILES
-            [System.Object]$MAIL_DOSIL
+            [System.Object]$MAIL_System
             [System.String]$SMTP_Host
     .NOTES
             NAME:     Export-VMGuestDiskCapacity
@@ -375,8 +375,8 @@ Function Export-VMGuestDiskCapacity {
         #$HTML_Export | Out-File D:\office\vm.html
 
         # Send the report via Mail
-        Send-MailMessage `            -To $MAIL_DOSIL.ToSysAdm `
-            -From $MAIL_DOSIL.From `
+        Send-MailMessage `            -To $MAIL_System.ToSysAdm `
+            -From $MAIL_System.From `
             -Subject "vCenter Report: $InitDate" `
             -Body $HTML_Export `
             -BodyAsHtml `
