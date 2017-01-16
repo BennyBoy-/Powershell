@@ -74,8 +74,10 @@ Function Get-BigFiles {
 
         # Get the content of the given folder and fetch files which are higher than the given size threshold
         Get-ChildItem -Path $Path -Recurse -ErrorAction "SilentlyContinue" |
-            Where-Object {$_.Length -ge $MinSize} |            Select-Object FullName, `                @{Name="Date Created";Expression={$_.CreationTime.ToString()}}, `
-                @{Name="Date Modified";Expression={$_.LastWriteTime.ToString()}}, `
+            Where-Object {$_.Length -ge $MinSize} | 
+            Select-Object FullName, ` 
+                @{Name="Date Created";Expression={$_.CreationTime.ToString()}}, ` 
+                @{Name="Date Modified";Expression={$_.LastWriteTime.ToString()}}, ` 
                 @{Name="Size (MB)";Expression={[math]::Round($_.Length / 1Mb, 2)}} |
             Sort-Object "Size (MB)" -Descending
     }
