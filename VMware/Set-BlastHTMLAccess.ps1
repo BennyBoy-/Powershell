@@ -6,9 +6,9 @@ Function Set-BlastHTMLAccess {
             This function will enable or disable the VMware BLAST HTML5 Protocol from one or multiple VDI Pools
     .DESCRIPTION
             This function will enable or disable the VMware BLAST HTML5 Protocol from one or multiple VDI Pools
-    .PARAMETER  $Pool
+    .PARAMETER  Pool
             The Pool in question in a string format, pipeline is supported
-    .PARAMETER  $Enabled
+    .PARAMETER  Enabled
             Enable the BLAST Protocol if present. BLAST is disabled without this parameter
     .EXAMPLE
             Set-BlastHTMLAccess -Pool "Pool_VDIW7" -Enabled
