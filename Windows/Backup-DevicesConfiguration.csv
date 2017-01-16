@@ -1,0 +1,5 @@
+Type;Host;Username;Password
+Brocade;10.10.100.200;backop;MyP4ssw0rd
+Brocade;10.10.100.201;backop;MyP4ssw0rd
+Brocade;10.20.100.200;backop;MyP4ssw0rd
+Brocade;10.20.100.201;backop;MyP4ssw0rd
