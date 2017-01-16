@@ -37,7 +37,7 @@
             # Assuming the CSV contains one column with the title "Computer"
             Import-Csv -Path D:\Scripts\PSv3\Set-SNMPProperties.csv | ForEach-Object {$_.Computer} | `
                 Set-SNMPProperties -SNMPPermittedManager "lab-centreon001.katalykt.lan" `
-                    -SNMPCommunity "katalyktRO" ` 
+                    -SNMPCommunity "katalyktRO" `
                     -SNMPClear
 
             PSComputerName           SNMPManagers                   SNMPCommunities 
